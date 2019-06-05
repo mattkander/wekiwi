@@ -33,4 +33,6 @@ Secondly, the design needed more contrast between the transparent nature of weki
 
 Lastly, there needed to be a tie in between transparency and the monitoring app. This could have been highlighted in the copy text.
 
+Notes:
+Within the psd (submitted via google drive) i've hidden the copy and icon layer which would give an indication as to my placement of text conforming to wetransfers style guide. 
 
