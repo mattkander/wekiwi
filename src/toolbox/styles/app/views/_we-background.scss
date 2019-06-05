@@ -1,0 +1,37 @@
+we-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: map-get($depths, background);
+  background-repeat: no-repeat;
+  background-color: map-get($colors, black);
+
+  &[fullscreen] {
+    background-size: cover;
+  }
+
+  &:not([fullscreen]) {
+    background-size: contain;
+  }
+
+  &:not([align]) {
+    background-position: center center;
+  }
+
+  $positions:
+    'top left',
+    'top center',
+    'top right',
+    'center right',
+    'center center',
+    'bottom right',
+    'bottom center',
+    'bottom left',
+    'center left';
+
+  @each $position in $positions {
+    &[align='#{$position}'] { background-position: #{$position}; }
+  }
+}

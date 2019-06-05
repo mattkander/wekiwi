@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Click to play</title>
+
+    <link href="{{ toolbox-css }}" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">{{! never remove this line, css will be inlined here }}
+</head>
+<body>
+
+    <we-wallpaper>
+
+        <we-background
+            src="assets/images/bg.jpg"
+            onload="onBackgroundLoad()"
+            fullscreen
+        ></we-background>
+
+        <we-container id="topcontainer" fullscreen>
+            <we-clickbutton></we-clickbutton>
+            <we-button id="playbutton" onclick="onPlayButton(event)">
+                <svg viewBox="0 0 300 300">
+                    <g fill="none" fill-rule="nonzero">
+                        <circle cx="150" cy="150" r="125"/>
+                        <path d="M220.773946 152.957854l-112.739463 65.038315V87.9195402z"/>
+                    </g>
+                </svg>
+            </we-button>
+        </we-container>
+
+        <we-video
+            id="videoplayer"
+            onstart="onPlaybackStarted()"
+            onfinished="onPlaybackFinished()"
+            controls="close, mute"
+            fullscreen
+        >
+            <source src="assets/videos/video.mp4" type="video/mp4"/>
+        </we-video>
+
+    </we-wallpaper>
+
+    <script src="{{ wallpaper-api }}" type="text/javascript"></script>
+    <script src="{{ toolbox-js }}" type="text/javascript"></script>
+    <script src="./assets/js/scripts.js" type="text/javascript"></script>{{! never remove this line, js will be inlined here }}
+</body>
+</html>

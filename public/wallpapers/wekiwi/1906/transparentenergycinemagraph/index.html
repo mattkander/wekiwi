@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Cinemagraph</title>
+
+    <link href="&#x2F;assets&#x2F;toolbox&#x2F;css&#x2F;wallpaper-toolbox-2.2.2.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <we-wallpaper>
+
+        <we-video onplayback="onPlaying()" loop autoplay muted fullscreen disable-vast>
+            <source src="assets/videos/wekiwiAnimation.mp4" type="video/mp4">
+        </we-video>
+
+        <we-clickbutton></we-clickbutton>
+    </we-wallpaper>
+
+    <script src="https:&#x2F;&#x2F;assets.wetransfer.net&#x2F;js&#x2F;wallpaper-api-2.2.2.js" type="text/javascript"></script>
+    <script src="&#x2F;assets&#x2F;toolbox&#x2F;js&#x2F;wallpaper-toolbox-2.2.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+"use strict";
+
+function onPlaying(currentTime, duration, progress) {
+	wallpaper.fadeIn();
+
+	/*
+ if(progress > 0.85){
+ 	intro.pause();
+ }
+ */
+}
+</script>
+</body>
+</html>

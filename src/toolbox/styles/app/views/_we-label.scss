@@ -1,0 +1,7 @@
+we-label {
+  @include position(absolute, 0 20px 20px 0);
+  @include museo-sans-rounded(14);
+  display: inline-block;
+  text-shadow: rgb(70, 73, 77) 0 1px 0;
+  color: white;
+}

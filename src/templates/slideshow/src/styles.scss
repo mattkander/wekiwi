@@ -1,0 +1,18 @@
+.slide {
+    position: absolute;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+
+    //needs to be the same as second value startSlideshow function
+    transition: transform 2000ms ease;
+}
+.prepare { transform: translateX(0); }
+.move { transform: translateX(-100%); }
+.last-slide { transform: translateX(-100%); }
+.first-slide { transform: translateX(0); }
+//this always needs to be the last class
+.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+}

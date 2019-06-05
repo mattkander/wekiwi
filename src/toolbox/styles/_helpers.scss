@@ -1,0 +1,33 @@
+.we-space {
+	position: absolute;
+	top: 60px;
+	right: 1vmin;
+	bottom: 60px;
+	left: 400px;
+}
+
+.we-label {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  text-shadow: rgb(70, 73, 77) 0px 1px 0px;
+  color: white;
+}
+
+.we-fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.we-deadcenter {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}

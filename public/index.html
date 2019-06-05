@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+	<link rel="shortcut icon" href="https://prod-cdn.wetransfer.net/assets/favicon-d12161435ace47c6883360e08466508593325f134c1852b1d0e6e75d5f76adda.ico">
+	<script type="text/javascript">
+
+		function geturi(name) {
+			if(name = (new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      	return decodeURIComponent(name[1]);
+		}
+
+		function getUserValue(value, e) {
+			return (value ? value : e);
+		}
+
+		var backgrounds = ['wallpapers/' + geturi('name') + '/index.html'];
+		var language = getUserValue(geturi('lang'), 'en');
+		var geo = {};
+		geo.country = getUserValue(geturi('country'), 'nl');
+		geo.continent = getUserValue(geturi('continent'), 'EU');
+
+	</script>
+</head>
+<body>
+
+	<!-- this element represents the WeTransfer Application -->
+	<div id="app"></div>
+	<div id="ui"></div>
+	<div id="logo"></div>
+	<div id="panel" onclick="hidePanel()"></div>
+
+	<!-- this iframe will contain your wallpaper, no need to change the source manually -->
+	<iframe id="wallpaper" seamless scrolling="no" border="0" frameborder="0" src="about:blank"></iframe>
+
+	<!-- this loads the WeTransfer Simulator -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+	<script type="text/javascript">
+		(function() {
+			var body = document.getElementsByTagName('body')[0];
+			if (body.classList)
+				body.classList.add(language);
+			else
+				body.className += ' ' + language;
+		})();
+
+		function hidePanel() {
+			var app = document.querySelector('#app');
+			app.removeAttribute('style');
+	    document.querySelector('#panel').classList.remove('show');
+		}
+	</script>
+
+</body>
+</html>

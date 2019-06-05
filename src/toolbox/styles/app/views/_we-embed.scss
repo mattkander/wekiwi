@@ -1,0 +1,31 @@
+.we-embed {
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: opacity .6s linear;
+
+  &[playing] {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  > div:not(.we-video-controls) {
+    width: 100%;
+    height: 100%;
+  }
+
+  > iframe,
+  > div:not(.we-video-controls) > iframe {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 300px);
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}

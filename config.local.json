@@ -1,0 +1,25 @@
+{
+  "export_dir" : "./exports/",
+  "toolbox"    : {
+  	"export_path" : "./public/assets/toolbox",
+  	"name"        : "wallpaper-toolbox",
+  	"version"     : "2.2.2"
+  },
+  "templates"  : {
+    "dev" : {
+      "toolbox-js"    : "/assets/toolbox/js/wallpaper-toolbox-2.2.2.js",
+      "toolbox-css"   : "/assets/toolbox/css/wallpaper-toolbox-2.2.2.css",
+      "wallpaper-api" : "https://assets.wetransfer.net/js/wallpaper-api-2.2.2.js"
+    },
+    "prod" : {
+      "toolbox-js"    : "https://backgrounds.wetransfer.net/wallpaperassets/201903/wallpaper-toolbox-2.2.2.js",
+      "toolbox-css"   : "https://backgrounds.wetransfer.net/wallpaperassets/201903/wallpaper-toolbox-2.2.2.css",
+      "wallpaper-api" : "https://assets.wetransfer.net/js/wallpaper-api-2.2.2.js"
+    }
+  },
+  "tracking": {
+    "mixpanel_key" : "68bc1fb87d42c52d1ef6f18f85b136bd",
+    "active": true
+  },
+  "auto_updates": true
+}

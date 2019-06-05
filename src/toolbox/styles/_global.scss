@@ -1,0 +1,33 @@
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+
+  &.-wetransfer-busy * {
+    cursor: progress !important;
+  }
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+img, 
+svg, 
+video, 
+span, 
+p {
+  -webkit-user-drag: none;
+  backface-visibility: hidden;
+}
