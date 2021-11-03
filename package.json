@@ -56,7 +56,7 @@
     "riot-compiler": "^3.4.0",
     "riotify": "^2.0.0",
     "simple-git": "^1.107.0",
-    "validator": "^10.9.0",
+    "validator": "^13.7.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "yargs": "^11.0.0"
